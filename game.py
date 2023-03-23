@@ -2,10 +2,8 @@ from random import choice, randrange
 from datetime import datetime
 
 #Inicio del programa.
-print('--------------------')
-print()
-print("Bienvenido/a.")
-print()
+print('--------------------\n')
+print("Bienvenido/a.\n")
 
 # Operadores posibles.
 operators = ["+", "-", "*", "/"]
@@ -20,8 +18,7 @@ correctos = 0
 incorrectos = 0
 sinResp = 0     
 
-print(f"¡Veremos cuanto tardas en responder estas {times} operaciones!")
-print()
+print(f"¡Veremos cuanto tardas en responder estas {times} operaciones!\n")
 
 for i in range(0, times):
     divPorCero = False
@@ -32,7 +29,7 @@ for i in range(0, times):
     operator = choice(operators)
     
     # Se imprime la cuenta.
-    print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
+    print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?\n")
     
     #Calculo de resultado.
     match operator:
@@ -47,11 +44,8 @@ for i in range(0, times):
             if number_2 != 0:
               res = round((number_1 / number_2),2) #Se redondea al 2do decimal.                                                                               
             else:
-                print("No se puede dividir por cero.")
-                divPorCero =True
-      
-
-    print()
+                print("No se puede dividir por cero.\n")
+                divPorCero =True        
     
     if divPorCero == False:
         # Le pedimos al usuario el resultado.
@@ -62,16 +56,14 @@ for i in range(0, times):
             resUser = float(resUser)
             #Informamos en pantalla si fue correcto o no.
             if res == resUser:
-                print("Correcto")
+                print("Correcto\n")
                 correctos += 1
             else:
-                print("Incorrecto")
+                print("Incorrecto\n")
                 incorrectos += 1
         else:
-            print("No se ingreso numero.")
-            sinResp += 1;                       
-
-    print()
+            print("No se ingreso numero.\n")
+            sinResp += 1;                        
 
     print()
 
@@ -85,12 +77,10 @@ total_time = end_time - init_time
 print(f"\n Tardaste {total_time.seconds} segundos.")
 
 # Informamos cantidad de aciertos y desaciertos.
-print(f" Acertaste {correctos} veces. Te equivocaste {incorrectos} veces. Sin responder {sinResp} veces.")
+print(f" Acertaste {correctos} veces. Te equivocaste {incorrectos} veces. Sin responder {sinResp} veces.\n")
 
 
 #Fin del programa.
 print()
-print()
-print("Fin del programa.")
-print()
-print('--------------------')
+print("Fin del programa.\n")
+print("--------------------\n")
