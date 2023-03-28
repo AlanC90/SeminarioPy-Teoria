@@ -1,4 +1,3 @@
-
 #Comienzo del programa.
 print('--------------------\n')
 print('Bienvenido/a.\n')
@@ -6,8 +5,6 @@ print('Bienvenido/a.\n')
 print('Solucion al Desafio 5 de la "Clase 2 Secuencias-Funciones".\n')
 
 print('Comienza carga de datos de peliculas de Harry Potter.\n')
-
-
 
 #Funcion para primer proceso del desafio.
 def ingreso_pelis():
@@ -33,10 +30,8 @@ pelis = ingreso_pelis()
 print(' ----------\n')
 
 
-
 #Funcion para segundo proceso del Desafio.
 #Calcular duracion promedio de peliculas.
-
 def calcular_promedio(pelis):
     valores = pelis.values()
     
