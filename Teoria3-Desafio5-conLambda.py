@@ -23,8 +23,6 @@ for elem in cadena:
 print("  " + nuevaCadena)      
   
   
-
-  
 #Fin.
 print()
 print()
