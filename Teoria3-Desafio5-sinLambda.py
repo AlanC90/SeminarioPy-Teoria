@@ -33,7 +33,6 @@ print("  " + nuevaCadena)
   
   
 
-  
 #Fin.
 print()
 print()
