@@ -60,7 +60,6 @@ print('Solucion al Desafio 5 de la "Clase 2 Secuencias-Funciones".\n')
 
 print('Comienza carga de datos de peliculas de Harry Potter.\n')
 
-
 #Cargar datos.
 pelis = ingreso_pelis()
 
