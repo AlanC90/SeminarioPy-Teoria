@@ -36,7 +36,6 @@ def calcular_promedio(pelis):
 
 
 #Funcion para tercer proceso del Desafio.
-#
 def informar_pelis_mayores(pelis, promedio):
     """ Esta función recibe el diccionario "pelis" y la duracion promedio, e informa películas que duran más que ese promedio."""        
     
