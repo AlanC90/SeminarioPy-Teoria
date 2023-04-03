@@ -1,14 +1,8 @@
-#Comienzo del programa.
-print('--------------------\n')
-print('Bienvenido/a.\n')
-
-print('Solucion al Desafio 5 de la "Clase 2 Secuencias-Funciones".\n')
-
-print('Comienza carga de datos de peliculas de Harry Potter.\n')
+#-----Módulos-----#
 
 #Funcion para primer proceso del desafio.
 def ingreso_pelis():
-    """ Esta función retorna un diccionario con los nombres y duración de películas """
+    """ Esta función retorna un diccionario con los nombres y duración de películas."""
     
     peli = input(" Titulo (<FIN> si quiere finalizar): ")
    
@@ -24,16 +18,13 @@ def ingreso_pelis():
         peli = input(" Titulo (<FIN> si quiere finalizar): ")
     
     return dicci
-    
-pelis = ingreso_pelis()
-
-print(' ----------\n')
 
 
 #Funcion para segundo proceso del Desafio.
-#Calcular duracion promedio de peliculas.
 def calcular_promedio(pelis):
-    valores = pelis.values()
+    """ Esta función recibe el diccionario "pelis", lo procesa y retorna duracion promedio de peliculas."""
+    
+    valores = pelis.values()    
     
     suma = 0
     for elem in valores:
@@ -44,22 +35,51 @@ def calcular_promedio(pelis):
     return suma/cantPelis
 
 
-print('Promedio de duracion de peliculas: ')
-promedio = calcular_promedio(pelis)
-print(f' {promedio}\n')
-
-
-
 #Funcion para tercer proceso del Desafio.
-#Informar películas que duran más que el promedio, en minutos.    
+#
 def informar_pelis_mayores(pelis, promedio):
+    """ Esta función recibe el diccionario "pelis" y la duracion promedio, e informa películas que duran más que ese promedio."""        
+    
+    cantMayores = 0
+    
     for elem in pelis:
       if pelis[elem] > promedio:
-        print(f' {elem}')
+        print(f'  {elem}')
+        cantMayores += 1
     
-print('Peliculas que duran mas que el promedio, en minutos: ')    
-informar_pelis_mayores(pelis, promedio) 
+    if cantMayores == 0:    #Para el caso que se ingrese solo una pelicula.
+      print("  Ninguna\n")
+    
 
+#-----Programa principal-----#
+
+#Comienzo del programa.
+print('--------------------\n')
+print('Bienvenido/a.\n')
+
+print('Solucion al Desafio 5 de la "Clase 2 Secuencias-Funciones".\n')
+
+print('Comienza carga de datos de peliculas de Harry Potter.\n')
+
+
+#Cargar datos.
+pelis = ingreso_pelis()
+
+print(' ----------\n')
+
+
+#Procesar e informar resultados.
+print("Resultados: \n")
+
+if len(pelis) != 0:
+    print(' Promedio de duracion de peliculas: ')
+    promedio = calcular_promedio(pelis)
+    print(f'  {promedio}\n')
+    
+    print(' Peliculas que duran mas que el promedio, en minutos: ')    
+    informar_pelis_mayores(pelis, promedio) 
+else:
+    print(' No se ingresaron datos.\n')
 
 
 #Fin del programa.
